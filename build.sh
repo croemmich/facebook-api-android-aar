@@ -7,7 +7,7 @@ then
 fi  
 
 version=$1
-./gradlew clean sourcesRelease javadocJarRelease && mvn deploy:deploy-file \	
+./gradlew clean sources javadocJarRelease && mvn deploy:deploy-file \	
 	-Dfile=build/libs/facebook-api-android-aar.aar\
 	-DrepositoryId=nexus.logicalgrape.com\
 	-Durl=http://nexus.logicalgrape.com/content/repositories/releases\
